@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Dua Ismail 💋💋</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Caveat:wght@700&family=DynaPuff:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+:root {
+    --primary: #ff748c;
+    --text-color: #7d5a5a;
+}
+
+body {
+    background: #fff5f7;
+    background-image: radial-gradient(#ffc1cc 0.8px, transparent 0.8px);
+    background-size: 30px 30px;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: 'Gaegu', sans-serif;
+}
+
+/* Floating Photos */
+.photo-scatter {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.polaroid {
+    position: absolute;
+    background: white;
+    padding: 10px 10px 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    width: 140px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.p1 { top: 8%; left: 8%; --rot: -12deg; }
+.p2 { top: 12%; right: 10%; --rot: 10deg; }
+.p3 { bottom: 12%; left: 6%; --rot: -8deg; }
+.p4 { bottom: 8%; right: 8%; --rot: 14deg; }
+.p5 { top: 45%; left: 4%; --rot: 5deg; }
+.p6 { top: 40%; right: 5%; --rot: -6deg; }
+
+@keyframes float {
+    0%,100% { transform: translateY(0) rotate(var(--rot)); }
+    50% { transform: translateY(-15px) rotate(var(--rot)); }
+}
+
+/* Cards */
+.glass-card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 50px;
+    padding: 50px 40px;
+    text-align: center;
+    max-width: 400px;
+    width: 85%;
+    box-shadow: 0 15px 35px rgba(255, 180, 193, 0.4);
+    position: relative;
+    z-index: 10;
+}
+
+h1 { font-family: 'DynaPuff', cursive; color: var(--primary); }
+p { font-family: 'Caveat', cursive; font-size: 1.8rem; }
+
+.btn-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#yes-btn { background: var(--primary); color: white; }
+#no-btn { background: #eee; color: #999; position: relative; }
+
+.hidden { display: none; }
+
+/* Hearts */
+.heart {
+    position: fixed;
+    top: -10vh;
+    font-size: 2rem;
+    animation: fall linear forwards;
+    z-index: 100;
+}
+
+@keyframes fall {
+    to { transform: translateY(110vh) rotate(360deg); }
+}
+
+/* Love Page */
+#love-page {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(135deg,#ff9eb5,#ffc1cc);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    z-index: 999;
+    text-align: center;
+}
+
+#love-page h1 {
+    font-size: 3rem;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%{transform:scale(1);}
+    50%{transform:scale(1.1);}
+    100%{transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="photo-scatter">
+    <div class="polaroid p1"><img src="https://i.postimg.cc/v1ttczM9/613325993-1864159504471099-2578195040317287396-n.jpg"></div>
+    <div class="polaroid p2"><img src="https://i.postimg.cc/SXffJrqW/613325993-1864159504471099-2578195040317287396-n-(1).jpg"></div>
+    <div class="polaroid p3"><img src="https://i.postimg.cc/VSWWdR1n/622600896-1780509882623548-255730906361353626-n.jpg"></div>
+    <div class="polaroid p4"><img src="https://i.postimg.cc/Z9xxCcZ8/626167331-1694868918161636-8244500642416389481-n.jpg"></div>
+    <div class="polaroid p5"><img src="https://i.postimg.cc/Lq33nTRV/627512372-1420962776487710-8510640151751023461-n.jpg"></div>
+    <div class="polaroid p6"><img src="https://i.postimg.cc/PLQQP4hQ/629284397-666641906506388-7050744061708881066-n.jpg"></div>
+</div>
+
+<div class="glass-card animate__animated animate__zoomIn" id="main-card">
+    <h1>Hellooo Dua Ismail 💖</h1>
+    <p>Ye picturess itni mazeee kiii UMWAHH 💋...</p>
+    <p style="font-weight:bold;color:var(--primary);">Will you be my bachon ki mama? 🎀</p>
+
+    <div class="btn-container">
+        <button class="btn" id="yes-btn" onclick="celebrate()">YES!</button>
+        <button class="btn" id="no-btn" onmouseover="moveButton()">No</button>
+    </div>
+</div>
+
+<div class="glass-card hidden animate__animated animate__heartBeat" id="success-card">
+    <h1>Yay!! ✨</h1>
+    <p style="font-size:2rem;">PATA THA HAN KHAO GI 😜😜!</p>
+
+    <div style="margin-top:20px;">
+        <button class="btn" style="background:var(--primary);color:white;"
+            onclick="openLovePage()">
+            MERI TARAF SE GIFT  🎁
+        </button>
+    </div>
+</div>
+
+<div id="love-page">
+    <h1>I LOVE YOU SOOOOO MUCHHH DUAAA UMMWAHHH  💋💋 💋💋</h1>
+</div>
+
+<script>
+function moveButton() {
+    const btn = document.getElementById('no-btn');
+    const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+    const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+    btn.style.position = 'fixed';
+    btn.style.left = x + 'px';
+    btn.style.top = y + 'px';
+}
+
+function celebrate() {
+    document.getElementById('main-card').classList.add('hidden');
+    document.getElementById('success-card').classList.remove('hidden');
+    setInterval(createHeart, 300);
+}
+
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '❤️';
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+}
+
+function openLovePage(){
+    document.getElementById('love-page').style.display = "flex";
+}
+</script>
+
+</body>
+</html> 
